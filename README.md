@@ -1,2 +1,10 @@
 # APK-injector
-Metasploit installer &amp; Apk maker &amp; meterpreter luncher
+Metasploit installer
+APK maker
+meterpreter luncher
+
+# How to run?
+git clone "repository"
+cd APK-injector
+python3 OutApk.py
+
