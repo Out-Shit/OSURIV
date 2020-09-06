@@ -4,7 +4,7 @@ APK maker
 meterpreter luncher
 
 # How to run?
-git clone "repository"
+git clone https://github.com/Outshit113/APK-injector
 cd APK-injector
 python3 OutApk.py
 
