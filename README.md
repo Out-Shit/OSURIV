@@ -1,4 +1,4 @@
-APK-injector
+OSURIV
 -----
 [![Python 3.x](https://img.shields.io/badge/python-3.x-yellow.svg)](https://www.python.org/) [![License](https://img.shields.io/badge/license-Public_domain-red.svg)](https://wiki.creativecommons.org/wiki/Public_domain)
 
@@ -8,7 +8,7 @@ How to install
 ----
 
 ```
-$ git clone https://github.com/Outshit113/APK-injector
+$ git clone https://github.com/Outshit113/OSURIV
 
 
 ```
