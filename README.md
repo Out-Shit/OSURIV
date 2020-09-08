@@ -9,8 +9,6 @@ How to install
 
 ```
 $ git clone https://github.com/Outshit113/OSURIV
-
-
 ```
 How to run
 ----
