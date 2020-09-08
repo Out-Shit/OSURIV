@@ -14,13 +14,17 @@ How to run
 ----
 
 ```
-$ cd APK-injector
-$ python3 OutApk.py
+$ cd OSURIV
+$ python3 osuriv.py
    
-  
-     Chose whats you wanna do:
+      choose Payload:
 
-     1-Install Metasploit (Needed)
-     2-Make the injected APK
-     3-Run the Meterpreter
-     @Outshit>
+      1-Android(.apk)
+      2-Python(.py)
+      3-Php(.php)
+      4-Java(.js)
+      5-Win x64(.dll)
+      6-Win x86(.dll)
+
+
+      OSURIV~ $ 
