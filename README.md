@@ -12,6 +12,7 @@ $ apt-get install && apt-get upgrade
 $ apt-get install python3
 $ apt-get install git
 $ git clone https://github.com/Outshit113/OSURIV
+$ chmod 777 *
 ```
 How to run
 ----
